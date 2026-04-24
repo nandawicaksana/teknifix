@@ -26,8 +26,8 @@ export default function About({ lang }) {
 
           <p className="mt-5 text-gray-500 max-w-2xl mx-auto leading-relaxed">
             {lang === "id"
-              ? "Solusi teknisi lengkap untuk rumah dan bisnis, mulai dari instalasi hingga maintenance profesional."
-              : "Complete technical solutions for home and business."}
+              ? "Solusi teknisi modern untuk rumah dan bisnis, mulai dari instalasi hingga maintenance profesional."
+              : "Modern technical solutions for home and business."}
           </p>
         </motion.div>
 
