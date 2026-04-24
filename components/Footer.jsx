@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Footer({ lang }) {
   return (
@@ -10,9 +11,16 @@ export default function Footer({ lang }) {
 
         {/* BRAND */}
         <div>
-          <h3 className="text-xl font-black text-gray-900">
-            Tekni<span className="text-orange-500">Fix</span>
-          </h3>
+          <div className="object-contain transition duration-300 drop-shadow-[0_0_6px_rgba(255,115,0,0.5)]">
+                    <Image
+                      src="/img/main logo.png"
+                      alt="TekniFix Logo"
+                      width={200}
+                      height={40}
+                      priority
+                      className="object-contain"
+                    />
+                  </div>
 
           <p className="mt-3 text-sm text-gray-500 leading-relaxed">
             {lang === "id"

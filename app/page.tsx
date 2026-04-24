@@ -10,7 +10,7 @@ import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import FloatingWA from "@/components/FloatingWA";
+import StickyCTA from "@/components/StickyCTA";
 
 export default function Home() {
   const [lang, setLang] = useState("id");
@@ -35,7 +35,7 @@ export default function Home() {
       <Portfolio lang={lang} />
       <Contact lang={lang} />
       <Footer lang={lang} />
-      <FloatingWA />
+      <StickyCTA lang={lang} />
     </>
   );
 }

@@ -63,7 +63,7 @@ export default function Contact({ lang }) {
 
             <div>
               <p className="font-semibold text-gray-900">Email</p>
-              <p>teknifix@gmail.com</p>
+              <p>supportteknifix@gmail.com</p>
             </div>
 
             <div>
