@@ -36,7 +36,7 @@ export default function Footer({ lang }) {
       {/* 🔥 SCROLL TO TOP */}
       <button
         onClick={scrollTop}
-        className="fixed bottom-6 right-6 z-50 bg-orange-500 hover:bg-orange-600 
+        className="fixed bottom-24 right-4 sm:bottom-6 z-50 bg-orange-500 hover:bg-orange-600 
         text-white p-3 rounded-full shadow-xl transition-all duration-300 hover:scale-110"
       >
         <ArrowUp size={18} />
@@ -130,9 +130,9 @@ export default function Footer({ lang }) {
                 📱 WhatsApp  
                 <br />
                 <span className="text-gray-400 text-xs">
-                      {lang === "id"
-      ? "WhatsApp segera tersedia"
-      : "WhatsApp coming soon"}
+              {lang === "id"
+              ? "WhatsApp segera tersedia"
+              : "WhatsApp coming soon"}
                 </span>
               </a>
             </li>
