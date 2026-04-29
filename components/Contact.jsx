@@ -6,92 +6,91 @@ export default function Contact({ lang }) {
   return (
     <section
       id="contact"
-      className="py-32 px-6 relative overflow-hidden border-t border-gray-100 bg-gradient-to-b from-white to-gray-50"
+      className="py-40 px-6 border-t border-gray-100 bg-white"
     >
+      <div className="max-w-4xl mx-auto text-center">
 
-      {/* 🔥 BACKGROUND GLOW */}
-      <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-orange-200 blur-[160px] opacity-20 -z-10" />
-
-      <div className="max-w-6xl mx-auto text-center">
-
-        {/* ✨ TITLE */}
+        {/* TITLE */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900">
             {lang === "id" ? "Butuh Bantuan?" : "Need Help?"}
-            <br />
-            <span className="text-orange-500">
-              {lang === "id" ? "Hubungi Kami Sekarang" : "Contact Us Now"}
-            </span>
           </h2>
 
-          <p className="mt-5 text-gray-500 max-w-xl mx-auto leading-relaxed">
+          <p className="mt-4 text-gray-500 max-w-lg mx-auto">
             {lang === "id"
-              ? "Tim TekniFix siap membantu Anda dengan cepat, profesional, dan tanpa ribet."
-              : "Our team is ready to help you quickly, professionally, and hassle-free."}
+              ? "Hubungi kami dan dapatkan solusi terbaik untuk kebutuhan Anda."
+              : "Contact us and get the best solution for your needs."}
           </p>
         </motion.div>
 
-        {/* 🔥 CTA CARD */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 40 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mt-16 relative rounded-3xl overflow-hidden"
-        >
+        {/* CTA */}
+      <motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.2 }}
+  viewport={{ once: true }}
+  className="mt-10"
+>
+  <a
+    href="mailto:supportteknifix@gmail.com"
+    className="
+    group relative inline-flex items-center gap-2 
+    px-10 py-4 rounded-xl 
+    bg-gray-900 text-white font-semibold
+    transition-all duration-300
+    hover:-translate-y-[2px] hover:shadow-lg
+    active:scale-[0.98]
+    "
+  >
+    {/* TEXT */}
+    {lang === "id" ? "Kirim Email" : "Send Email"}
 
-          {/* glass background */}
-          <div className="absolute inset-0 bg-white/60 backdrop-blur-xl border border-white/40 shadow-[0_30px_80px_rgba(0,0,0,0.08)]" />
+    {/* ICON ARROW */}
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
 
-          {/* glow accent */}
-          <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-orange-300 blur-[120px] opacity-30" />
+    {/* SUBTLE GLOW */}
+    <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition bg-white/5"></span>
+  </a>
 
-          <div className="relative p-10 md:p-14">
+  <p className="text-xs text-gray-400 mt-3">
+    {lang === "id"
+      ? "WhatsApp segera tersedia"
+      : "WhatsApp coming soon"}
+  </p>
+</motion.div>
 
-            {/* CTA BUTTON */}
-            <a
-              href="https://wa.me/6281290979905?text=Halo%20TekniFix,%20saya%20butuh%20bantuan"
-              target="_blank"
-              className="inline-block bg-orange-500 text-white px-10 py-4 rounded-full 
-              shadow-xl hover:scale-[1.05] hover:shadow-2xl transition font-semibold"
-            >
-              {lang === "id" ? "Chat WhatsApp Sekarang" : "Chat on WhatsApp"}
-            </a>
+        {/* INFO */}
+        <div className="mt-12 flex flex-col items-center gap-2 text-sm text-gray-500">
+          <p>
+            <span className="text-gray-400">Email:</span>{" "}
+            <span className="text-gray-900 font-medium">
+              supportteknifix@gmail.com
+            </span>
+          </p>
 
-            {/* ✨ SUB CTA */}
-            <p className="mt-4 text-gray-500 text-sm">
-              {lang === "id"
-                ? "Respon cepat dalam hitungan menit"
-                : "Fast response within minutes"}
-            </p>
+          <p>
+            <span className="text-gray-400">WhatsApp:</span>{" "}
+            <span className="text-gray-900 font-medium">
+            {lang === "id"
+              ? "segera tersedia"
+              : "coming soon"}
+            </span>
+          </p>
 
-            {/* INFO */}
-            <div className="mt-12 grid sm:grid-cols-3 gap-6 text-sm">
-
-              <div className="p-4 rounded-xl bg-white/70 backdrop-blur border border-gray-100">
-                <p className="font-semibold text-gray-900">WhatsApp</p>
-                <p className="text-gray-600 mt-1">+62 812-9097-9905</p>
-              </div>
-
-              <div className="p-4 rounded-xl bg-white/70 backdrop-blur border border-gray-100">
-                <p className="font-semibold text-gray-900">Email</p>
-                <p className="text-gray-600 mt-1">supportteknifix@gmail.com</p>
-              </div>
-
-              <div className="p-4 rounded-xl bg-white/70 backdrop-blur border border-gray-100">
-                <p className="font-semibold text-gray-900">Lokasi</p>
-                <p className="text-gray-600 mt-1">Jakarta, Indonesia</p>
-              </div>
-
-            </div>
-
-          </div>
-        </motion.div>
+          <p>
+            <span className="text-gray-400">Location:</span>{" "}
+            <span className="text-gray-900 font-medium">
+              Jakarta, Indonesia
+            </span>
+          </p>
+        </div>
 
       </div>
     </section>

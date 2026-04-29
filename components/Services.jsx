@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 import { t } from "@/lib/i18n";
 
 export default function Services({ lang }) {
-  const services = [
-    { icon: "🔌", title: "Kelistrikan", desc: "Instalasi & perbaikan listrik rumah / gedung" },
-    { icon: "💧", title: "Pompa Air", desc: "Servis, instalasi, dan troubleshooting pompa" },
-    { icon: "❄️", title: "AC", desc: "Cuci, instalasi, dan perbaikan AC" },
-    { icon: "🌐", title: "Jaringan", desc: "Setup WiFi, LAN, dan konfigurasi jaringan" },
-    { icon: "💻", title: "Komputer", desc: "Service PC, laptop, dan maintenance" },
-    { icon: "📹", title: "CCTV", desc: "Instalasi & monitoring sistem keamanan" },
-    { icon: "🏗️", title: "Design & Build", desc: "Interior, gudang, ruko, olahraga" },
-    { icon: "🌍", title: "Website", desc: "Pembuatan website profesional & modern" },
-  ];
+const services = [
+  { icon: "🔌", title: t[lang].electrical, desc: t[lang].electricalDesc },
+  { icon: "💧", title: t[lang].water, desc: t[lang].waterDesc },
+  { icon: "❄️", title: t[lang].ac, desc: t[lang].acDesc },
+  { icon: "🌐", title: t[lang].network, desc: t[lang].networkDesc },
+  { icon: "💻", title: t[lang].computer, desc: t[lang].computerDesc },
+  { icon: "📹", title: t[lang].cctv, desc: t[lang].cctvDesc },
+  { icon: "🏗️", title: t[lang].design, desc: t[lang].designDesc },
+  { icon: "🌍", title: t[lang].web, desc: t[lang].webDesc },
+];
 
   return (
     <section
@@ -89,9 +89,6 @@ export default function Services({ lang }) {
           viewport={{ once: true }}
           className="mt-16"
         >
-          <button className="bg-orange-500 text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.03] transition">
-            {lang === "id" ? "Hubungi Sekarang" : "Contact Now"}
-          </button>
         </motion.div>
 
       </div>

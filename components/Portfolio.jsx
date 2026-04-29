@@ -4,28 +4,29 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import Link from "next/link";
+import { t } from "@/lib/i18n";
 
 export default function Portfolio({ lang }) {
 
-  const items = [
-    { title: "AC", img: "/img/ac.png", desc: "Instalasi & maintenance AC." },
-    { title: "CCTV", img: "/img/cctv.png", desc: "Sistem keamanan CCTV." },
-    { title: "Jaringan", img: "/img/jaringan.png", desc: "Setup LAN/WiFi stabil." },
-    { title: "Kelistrikan", img: "/img/listrik.png", desc: "Instalasi listrik." },
-    { title: "Komputer", img: "/img/komputer.png", desc: "Service & rakit PC." },
-    { title: "Monitoring", img: "/img/monitoring cctv.png", desc: "Monitoring CCTV." },
-    { title: "Pompa Air", img: "/img/pompa.png", desc: "Perbaikan pompa air." },
-    { title: "Website", img: "/img/website.png", desc: "Web development." },
-  ];
+const items = [
+  { title: t[lang].ac, img: "/img/ac.png", desc: t[lang].acDesc },
+  { title: t[lang].cctv, img: "/img/cctv.png", desc: t[lang].cctvDesc },
+  { title: t[lang].network, img: "/img/jaringan.png", desc: t[lang].networkDesc },
+  { title: t[lang].electrical, img: "/img/listrik.png", desc: t[lang].electricalDesc },
+  { title: t[lang].computer, img: "/img/komputer.png", desc: t[lang].computerDesc },
+  { title: t[lang].cctv, img: "/img/monitoring cctv.png", desc: t[lang].cctvDesc },
+  { title: t[lang].water, img: "/img/pompa.png", desc: t[lang].waterDesc },
+  { title: t[lang].web, img: "/img/website.png", desc: t[lang].webDesc },
+];
 
-  // 🔥 duplicate for seamless loop
+  // duplicate for seamless loop
   const loopItems = [...items, ...items];
 
   const [index, setIndex] = useState(null);
   const selected = index !== null ? items[index % items.length] : null;
 
   return (
-    <section className="py-32 px-6 relative overflow-hidden border-t border-gray-100">
+    <section className="py-32 px-6 relative overflow-hidden border-t border-gray-100" id="portfolio">
 
       {/* BG */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-orange-100 blur-[120px] opacity-20 -z-10" />
@@ -34,8 +35,8 @@ export default function Portfolio({ lang }) {
 
         {/* TITLE */}
         <h2 className="text-3xl md:text-5xl font-black text-gray-900">
-          {lang === "id" ? "Hasil Kerja " : "Our "}
-          <span className="text-orange-500">TekniFix</span>
+          {t[lang].portfolioTitle}
+          <span className="text-orange-500"> TekniFix</span>
         </h2>
 
         {/* SLIDER */}
@@ -90,7 +91,7 @@ export default function Portfolio({ lang }) {
         <div className="mt-14">
           <Link href="/gallery">
             <button className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
-              {lang === "id" ? "Lihat Semua Proyek" : "View Full Gallery"}
+              {t[lang].viewProject}
             </button>
           </Link>
         </div>
