@@ -130,7 +130,9 @@ export default function Footer({ lang }) {
                 📱 WhatsApp  
                 <br />
                 <span className="text-gray-400 text-xs">
-                  +62 812-9097-9905
+                      {lang === "id"
+      ? "WhatsApp segera tersedia"
+      : "WhatsApp coming soon"}
                 </span>
               </a>
             </li>
